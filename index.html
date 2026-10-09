@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyunjin Hub - Violence District</title>
+<meta name="description" content="Hyunjin Hub: script untuk Roblox Violence District. Ambil key, join Discord, dan lihat harga lisensi.">
+<style>
+  :root{
+    --bg:#0b0b12; --card:#14141f; --line:#26263a; --text:#ecebf5; --muted:#9a98b3;
+    --accent:#e11d48; --accent2:#7c3aed; --ok:#22c55e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:960px;margin:0 auto;padding:0 18px}
+  nav{position:sticky;top:0;z-index:10;background:rgba(11,11,18,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+  .logo{font-weight:800;letter-spacing:.5px}
+  .logo span{color:var(--accent)}
+  nav ul{display:flex;gap:18px;list-style:none;font-size:14px;color:var(--muted)}
+  nav ul a:hover{color:var(--text)}
+  .hero{padding:70px 0 40px;text-align:center;background:radial-gradient(600px 300px at 50% 0,rgba(225,29,72,.22),transparent 70%)}
+  .badge{display:inline-block;font-size:12px;padding:4px 12px;border:1px solid var(--line);border-radius:99px;color:var(--muted);margin-bottom:18px}
+  h1{font-size:clamp(32px,7vw,54px);line-height:1.1;margin-bottom:14px}
+  h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:var(--muted);max-width:520px;margin:0 auto 26px}
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--card);cursor:pointer;color:var(--text);transition:.15s}
+  .btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));border:0}
+  section{padding:46px 0}
+  h2{font-size:26px;margin-bottom:6px}
+  .sub{color:var(--muted);margin-bottom:22px;font-size:15px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .code{position:relative;background:#07070c;border:1px solid var(--line);border-radius:10px;padding:14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:#c9f7d6;word-break:break-all;margin-bottom:14px}
+  .steps{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:6px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .step b{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--accent);align-items:center;justify-content:center;font-size:13px;margin-bottom:8px}
+  .step p{font-size:14px;color:var(--muted)}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column}
+  .plan.hot{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+  .plan h3{font-size:18px}
+  .price{font-size:30px;font-weight:800;margin:10px 0}
+  .price small{font-size:13px;color:var(--muted);font-weight:500}
+  .plan ul{list-style:none;margin:8px 0 20px;color:var(--muted);font-size:14px;flex:1}
+  .plan li{padding:4px 0}
+  .plan li::before{content:"✓ ";color:var(--ok)}
+  .note{margin-top:18px;font-size:13px;color:var(--muted)}
+  footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--muted);font-size:13px}
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(80px);background:var(--ok);color:#04130a;padding:10px 18px;border-radius:10px;font-weight:600;transition:.25s;z-index:20}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+  @media(max-width:560px){nav ul{gap:12px;font-size:13px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">HYUNJIN<span>HUB</span></a>
+    <ul>
+      <li><a href="#script">Script</a></li>
+      <li><a href="#harga">Harga</a></li>
+      <li><a href="#discord">Discord</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">Roblox • Violence District</span>
+    <h1>Hyunjin <em>Hub</em></h1>
+    <p>Script untuk Violence District. Ambil key, salin script, lalu jalankan di executor kamu.</p>
+    <div class="btns">
+      <a class="btn primary" href="#script">Ambil Script</a>
+      <a class="btn" href="https://discord.gg/39WNwMQaN" target="_blank" rel="noopener">Join Discord</a>
+    </div>
+  </div>
+</header>
+
+<section id="script">
+  <div class="wrap">
+    <h2>Script</h2>
+    <p class="sub">Salin script di bawah, tempel di executor, lalu masukkan key.</p>
+    <div class="card">
+      <div class="code" id="scriptBox">loadstring(game:HttpGet("https://raw.githubusercontent.com/noelrangga354-ops/iwak.html/refs/heads/main/HyunjinHub.lua"))()</div>
+      <div class="btns" style="justify-content:flex-start">
+        <button class="btn primary" id="copyBtn">Salin Script</button>
+        <a class="btn" id="keyLink" href="https://GANTI-LINK-JNKEY-KAMU" target="_blank" rel="noopener">Cari Key (JNKey)</a>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><b>1</b><p>Klik <strong>Cari Key</strong> dan selesaikan langkahnya untuk mendapat key.</p></div>
+      <div class="step"><b>2</b><p>Salin script dengan tombol <strong>Salin Script</strong>.</p></div>
+      <div class="step"><b>3</b><p>Buka Violence District, tempel script di executor, lalu execute.</p></div>
+      <div class="step"><b>4</b><p>Masukkan key saat diminta dan nikmati fiturnya.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="harga">
+  <div class="wrap">
+    <h2>Harga Lisensi</h2>
+    <p class="sub">Pilih lisensi tanpa key system. Beli lewat Discord.</p>
+    <div class="grid">
+      <div class="plan">
+        <h3>Harian</h3>
+        <div class="price">Rp 5.000 <small>/ 1 hari</small></div>
+        <ul><li>Tanpa key system</li><li>Semua fitur</li><li>Update gratis</li></ul>
+        <a class="btn" href="https://discord.gg/39WNwMQaN" target="_blank" rel="noopener">Beli via Discord</a>
+      </div>
+      <div class="plan hot">
+        <h3>Mingguan</h3>
+        <div class="price">Rp 20.000 <small>/ 7 hari</small></div>
+        <ul><li>Tanpa key system</li><li>Semua fitur</li><li>Update gratis</li><li>Support prioritas</li></ul>
+        <a class="btn primary" href="https://discord.gg/39WNwMQaN" target="_blank" rel="noopener">Beli via Discord</a>
+      </div>
+      <div class="plan">
+        <h3>Bulanan</h3>
+        <div class="price">Rp 50.000 <small>/ 30 hari</small></div>
+        <ul><li>Tanpa key system</li><li>Semua fitur</li><li>Update gratis</li><li>Support prioritas</li></ul>
+        <a class="btn" href="https://discord.gg/39WNwMQaN" target="_blank" rel="noopener">Beli via Discord</a>
+      </div>
+      <div class="plan">
+        <h3>Permanen</h3>
+        <div class="price">Rp 150.000 <small>/ selamanya</small></div>
+        <ul><li>Tanpa key system</li><li>Semua fitur</li><li>Update seumur hidup</li><li>Support prioritas</li></ul>
+        <a class="btn" href="https://discord.gg/39WNwMQaN" target="_blank" rel="noopener">Beli via Discord</a>
+      </div>
+    </div>
+    <p class="note">Harga di atas contoh. Ubah sesuai harga kamu di file index.html.</p>
+  </div>
+</section>
+
+<section id="discord">
+  <div class="wrap">
+    <div class="card" style="text-align:center">
+      <h2>Gabung Komunitas</h2>
+      <p class="sub">Update script, bantuan, dan pembelian lisensi ada di Discord.</p>
+      <a class="btn primary" href="https://discord.gg/39WNwMQaN" target="_blank" rel="noopener">Join Discord</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © <span id="yr"></span> Hyunjin Hub. Tidak berafiliasi dengan Roblox Corporation. Gunakan dengan risiko sendiri.
+  </div>
+</footer>
+
+<div class="toast" id="toast">Script disalin!</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var toast = document.getElementById('toast');
+  document.getElementById('copyBtn').addEventListener('click', function () {
+    var text = document.getElementById('scriptBox').textContent.trim();
+    var done = function () {
+      toast.classList.add('show');
+      setTimeout(function () { toast.classList.remove('show'); }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done);
+    } else {
+      var t = document.createElement('textarea');
+      t.value = text; document.body.appendChild(t); t.select();
+      document.execCommand('copy'); document.body.removeChild(t); done();
+    }
+  });
+</script>
+</body>
+</html>
